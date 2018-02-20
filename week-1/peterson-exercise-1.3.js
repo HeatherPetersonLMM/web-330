@@ -27,20 +27,21 @@ FirstName LastName
 // start program
 
 
-function Cellphone(details) {
-    this.details = details;
-    this.manufacturer = "T-Mobile";
+function Cellphone(details) {  //Declaring the function 'Cellphone'
+    this.details = details;  // 'this' constructor for 'details'
+    this.manufacturer = "T-Mobile"; // 'this' dot syntax to add kes and values
     this.model = "Iphone 8";
     this.color = "Gold";
     this.price = "$" + 899.99;
 
-    console.log("-- DISPLAYING CELL PHONE DETAILS --");
+    console.log("-- DISPLAYING CELL PHONE DETAILS --"); // logs Header 
 
-    this.getDetails = function() {
+    this.getDetails = function() { //returns details from 'Cellphone' function
         return this.details + " Manufacturer: " + this.manufacturer + "\n" + " Model: " + this.model + "\n" + " Color: " + this.color + "\n" + " Price: " + this.price;
     };
 }
-var cellphone = new Cellphone("");
+var cellphone = new Cellphone(""); //Variable 'cellphone' declaring new operator 'Cellphone'
 
-console.log(cellphone.getDetails());
+console.log(cellphone.getDetails()); // logs 'cellphone' details 
+
 
