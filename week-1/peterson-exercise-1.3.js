@@ -44,4 +44,16 @@ var cellphone = new Cellphone(""); //Variable 'cellphone' declaring new operator
 
 console.log(cellphone.getDetails()); // logs 'cellphone' details 
 
+//End Program
+
+//Output Results
+//Heather Peterson
+//Exercise 1.3
+//Date: 02-20-2018
+
+//-- DISPLAYING CELL PHONE DETAILS --
+// Manufacturer: T-Mobile
+// Model: Iphone 8
+// Color: Gold
+// Price: $899.99
 
