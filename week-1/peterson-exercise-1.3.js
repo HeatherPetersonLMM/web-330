@@ -27,22 +27,29 @@ FirstName LastName
 // start program
 
 
-function Cellphone(details) {  //Declaring the function 'Cellphone'
-    this.details = details;  // 'this' constructor for 'details'
-    this.manufacturer = "T-Mobile"; // 'this' dot syntax to add kes and values
-    this.model = "Iphone 8";
-    this.color = "Gold";
-    this.price = "$" + 899.99;
+function Cellphone(manufacturer, model, color, price) {  //Declaring the function 'Cellphone'
+    this.manufacturer = manufacturer;  // 'this' constructor for 'details'
+    this.model = model;  // 'this' dot syntax to add keys and values
+    this.color = color;
+    this.price = price;
 
     console.log("-- DISPLAYING CELL PHONE DETAILS --"); // logs Header 
 
-    this.getDetails = function() { //returns details from 'Cellphone' function
-        return this.details + " Manufacturer: " + this.manufacturer + "\n" + " Model: " + this.model + "\n" + " Color: " + this.color + "\n" + " Price: " + this.price;
+    this.getPrice = function() { 
+        return this.price;
     };
-}
-var cellphone = new Cellphone(""); //Variable 'cellphone' declaring new operator 'Cellphone'
 
-console.log(cellphone.getDetails()); // logs 'cellphone' details 
+    this.getModel = function() { 
+        return this.model;
+    };
+
+    this.getDetails = function () {
+        return "Manufacturer: " + this.manufacturer + "\nModel: " + this.getModel() + "\nColor: " + this.color + "\nPrice: $" + this.getPrice();
+    }
+}
+
+var iPhone = new Cellphone("Apple", "iPhone 8", "Gold", "899.99")
+console.log(iPhone.getDetails());
 
 //End Program
 
