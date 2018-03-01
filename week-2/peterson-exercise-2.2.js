@@ -32,3 +32,12 @@ Heather.getAge();  //calling the getAge function of Heather object
 
 console.log("The person's full name is: '%s'", Heather.fullname + "."); //outputs the full name value
 console.log("The person's age is: '%s'", Heather.age + "."); //outputs the age value
+
+//Output Results
+//
+//Heather Peterson
+//Exercise 2.2
+//Date: 03-01-2018
+//
+//The person's full name is: 'Heather Peterson.'
+//The person's age is: '31.'
