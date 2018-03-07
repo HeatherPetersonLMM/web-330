@@ -1,6 +1,16 @@
 var header = require('../header.js');
 
 /*
+============================================
+; Title:  The Singleton Pattern
+; Author: Professor Krasso 
+; Date:   7 March 2018
+; Modified By: Heather Peterson
+; Description: Exercise 3.3
+;===========================================
+*/ 
+
+/*
  Expected output:
 
  FirstName LastName
