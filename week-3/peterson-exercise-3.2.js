@@ -1,15 +1,13 @@
 var header = require('../header.js'); 
 /*
 ============================================
-; Title:  Prototype Pattern
+; Title:  The Factory Pattern
 ; Author: Professor Krasso 
-; Date:   1 March 2018
+; Date:   6 March 2018
 ; Modified By: Heather Peterson
-; Description: Exercise 2.2
+; Description: Exercise 3.2
 ;===========================================
 */ 
-
-
 
 function Postgres(properties) {
     this.username = properties.username || "admin";
@@ -18,7 +16,7 @@ function Postgres(properties) {
 }
 
 function MySql(properties) {
-    this.username = properties.username || "admin";
+    this.username = properties.username || "ca-admin";
     this.password = properties.password || "ca-s3cret";
     this.server = properties.server || "localhost:8000";
     this.version = properties.version || 5.7
