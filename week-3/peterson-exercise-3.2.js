@@ -23,7 +23,7 @@ function MySql(properties) {
 
 }
 
-function Oracle (properties){
+function Oracle (properties) {
     this.username = properties.username || 'admin';
     this.password = properties.password || 'o-s3cret';
     this.server = properties.server || 'localhost:5454';
@@ -51,7 +51,7 @@ DatabaseFactory.prototype.createDatabase = function(properties) {
       this.databaseClass = Oracle;
   }
 
-  if (properties.databaseType == 'Informax') {
+  if (properties.databaseType == 'Informix') {
       this.databaseClass = Informix;
   }
 
@@ -83,7 +83,7 @@ var oracle = oracleFactory.createDatabase({
 });
 
 var informixFactory = new DatabaseFactory();
-var informax = informixFactory.createdDatebase({
+var informix = informixFactory.createDatabase({
     databaseType: "Informix",
     username: "admin",
     password: "password"
