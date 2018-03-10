@@ -23,31 +23,40 @@ var header = require('../header.js');
 
 // start program
 
-var DatabaseSingleton = (function() {
-    var instance;
+var DatabaseSingleton = (function() {  // DatabaseSingleton object with function
+    var instance;  // creating an instance object
 
-    function createInstance() {
-        var postgresDatabase = new Object("Database instance initialized!");
-        return postgresDatabase;
+    function createInstance() {  // createInstance() function
+        var postgresDatabase = new Object("Database instance initialized!");  // adds a new object to postgresDatabase
+        return postgresDatabase; //  returns postgresDatabase object
     }
 
-    return {
-        getInstance: function() {
-            if (!instance) {
-                instance = createInstance();
+    return { 
+        getInstance: function() {  //returns single function called getInstance
+            if (!instance) {  //checks to see if the current instance is active
+                instance = createInstance();  //if current instance is not active, creates createInstance()
             }
-            return instance;
+            return instance;  //returns the instance of this object
         }
     }
 })();
 
-function databaseSingletonTest() {
-    var oracle = DatabaseSingleton.getInstance();
-    var postgres = DatabaseSingleton.getInstance();
+function databaseSingletonTest() {  // databaseSingletonTest() function 
+    var oracle = DatabaseSingleton.getInstance();  // oracle database instance calling DatabaseSingleton class and getInstance method
+    var postgres = DatabaseSingleton.getInstance(); // postgres database instance calling DatabaseSingleton class and getInstance method
 
-    console.log("Same database instance? %s", oracle === postgres);
+    console.log("Same database instance? %s", oracle === postgres);  // logs comparison between oracle and postgres objects whether they are the same or different
 }
 
-databaseSingletonTest();
+databaseSingletonTest();  // calls the databaseSingletonTest function and ouputs test results
 
 // end program
+
+
+//Output results
+
+//Heather Peterson
+//Exercise 3.3
+//Date: 03-09-2018
+//
+//Same database instance? true
