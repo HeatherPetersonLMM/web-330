@@ -20,7 +20,6 @@
     <script type="text/javascript">
 
         $(function () {
-    // https://github.com/toddmotto/public-apis/blob/master/README.md
             $('#get1').click(function () {
             $.get("https://dog.ceo/api/breeds/image/random", function (data, status) {
                 console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
