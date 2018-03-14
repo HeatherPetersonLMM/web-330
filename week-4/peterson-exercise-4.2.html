@@ -19,10 +19,10 @@
 
     <script type="text/javascript">
 
-        $(function () {
-            $('#get1').click(function () {
-            $.get("https://dog.ceo/api/breeds/image/random", function (data, status) {
-                console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+        $(function () {  
+            $('#get1').click(function () {  // a function that registers an onClick event 
+            $.get("https://dog.ceo/api/breeds/image/random", function (data, status) {  //GET request for URL and function
+                console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);  //logs output on Inspect page
              })
 })
 });
