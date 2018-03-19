@@ -15,9 +15,14 @@
 
     <button id="delete1">HTTP DELETE Request (Object Literal)</button>
 
-<script>
+    <br/>
+    <hr/>
+
+<script type="text/javascript">
+
     $(function() {
-        $("#delete1").click(function() {
+        $("#delete1").click(function() {  // delete button function that registers an onClick event
+            
             $.ajax({
                 url: 'http://httpbin.org/delete',
                 dataType: 'json',
