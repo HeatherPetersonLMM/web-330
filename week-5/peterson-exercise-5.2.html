@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy Pattern Examples</title>
+
+    <!-- bootstrap reference-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- jquery Reference Library -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Home</a>
+    </nav>
+
+    <br /><br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Exercise 5.2 - The Proxy Pattern</h2><br>
+                <h3>by Heather Peterson</h3>
+
+                <button class="btn btn-primary" id="btnPreviewProxy">Preview Proxy</button>
+            
+                <br />
+                <span id="spanProxyResults"></span>
+            </div>
+        </div>
+    </div>
+
+<script>
+/*
+============================================
+; Title:  The The Proxy Pattern
+; Author: Professor Krasso 
+; Date:   25 March 2018
+; Modified By: Heather Peterson
+; Description: Exercise 5.2
+;===========================================
+*/ 
+    $(function() {  //jQuery function
+        var iPhone =  {  // proxy example with 2 object fields (make,model)
+            make: "Apple",
+            model: "X",
+            display: function() {  // used to display proxy pattern
+                // clears the span tag before adding new content
+                $("#spanProxyResults").html(""); // find spanProxyResults tag and set span to an empty html
+
+                $("#spanProxyResults").append("<br />Make: " + this.make + "<br />" + "Model: " + this.model)  // find spanProxyResults and append the make and model values
+            }
+        };
+        $("#btnPreviewProxy").click($.proxy(iPhone, "display"));  // finds PreviewProxy button and registers a click event that uses the proxy function and display function
+        
+
+    });
+</script>
+
+</body>
+</html>
